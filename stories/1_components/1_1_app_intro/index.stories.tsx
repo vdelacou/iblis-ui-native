@@ -1,6 +1,6 @@
+import { action } from '@storybook/addon-actions';
 import { RenderFunction, storiesOf } from '@storybook/react-native';
 import * as React from 'react';
-import { action } from 'storybook__addon-actions';
 import { AppIntro, Intro } from '../../../src';
 import { injectTheme } from '../../decorators';
 

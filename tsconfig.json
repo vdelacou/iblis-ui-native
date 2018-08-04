@@ -4,22 +4,21 @@
     "outDir": "build/dist",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "allowJs": true,
-    "checkJs": true,
-    "declaration": false,
+    "allowJs": false,
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "noEmitHelpers": true,
-    "jsx": "react",
+    "jsx": "react-native",
     "lib": [
       "dom",
+      "es2015",
       "es2016",
-      "es2017.object"
     ],
     "target": "es5",
-    "module": "commonjs",
+    "module": "es2015",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
@@ -30,7 +29,8 @@
     "noUnusedParameters": true,
     "strict": true,
     "pretty": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*"

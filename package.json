@@ -1,15 +1,13 @@
 {
   "name": "iblis-ui-native",
-  "version": " 0.0.1-alpha.1",
+  "version": " 0.0.1-alpha.5",
   "license": "Apache-2.0",
   "author": "DELACOURT Vincent <vincent.delacourt@gmail.com>",
   "description": "Beautiful React Native UI components",
-  "contributors": [
-    {
-      "name": "DELACOURT Vincent",
-      "email": "vincent.delacourt@gmail.com"
-    }
-  ],
+  "contributors": [{
+    "name": "DELACOURT Vincent",
+    "email": "vincent.delacourt@gmail.com"
+  }],
   "repository": {
     "type": "git",
     "url": "git@github.com:vdelacou/iblis-ui-native.git"
@@ -24,7 +22,11 @@
     "build/dist"
   ],
   "scripts": {
-    "storybook": "storybook $PWD/rn-cli.config.js -p 7007"
+    "storybook": "storybook $PWD/rn-cli.config.js -p 7007",
+    "lint": "tslint src/**/*.ts* --project tsconfig.json",
+    "delete": "rimraf build",
+    "build": "yarn && yarn delete && yarn lint && yarn tsc",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "react": "16.4.1",
@@ -50,6 +52,7 @@
     "react-dom": "16.3.1",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "16.3.1",
+    "rimraf": "^2.6.2",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
